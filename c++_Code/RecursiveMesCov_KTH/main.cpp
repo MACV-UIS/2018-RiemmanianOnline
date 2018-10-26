@@ -33,11 +33,11 @@ int main()
     cout<<" vec test: "<< vec_test.size() << " vec train: "<< vect_training_val.size() << " vec activities: "<< vec_activities.size() << endl;
 
     /// To compute training complete sequences
-    //Concat_Rec_Log_CoV(vec_test, "test_concMes_DF_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 5.0);
-    //Concat_Rec_Log_CoV(vect_training_val, "train_concMes_DF_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 5.0);
+    Concat_Rec_Log_CoV(vec_test, "test_concMes_DF_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0);
+    Concat_Rec_Log_CoV(vect_training_val, "train_concMes_DF_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0);
 
-    Concat_Rec_Log_CoV_splitLearning(vect_training_val, "Gtrain_concMes_IFs_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 5.0);
-    Concat_Rec_Log_CoV_splitLearning(vec_test, "Gtest_concMes_IFs_24_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 4.0);
+    //Concat_Rec_Log_CoV_splitLearning(vect_training_val, "Gtrain_concMes_IFs_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0);
+    //Concat_Rec_Log_CoV_splitLearning(vec_test, "Gtest_concMes_IFs_24_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0); //4.0
 
 
 //    Concat_Scal_Rec_Log_CoV_WithApp(vec_test, "test_concScal_Th_15_22_5_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 2.0, 5);
@@ -69,5 +69,5 @@ void ToLoadFiles()
     redFileSequences(str_path_valid, vect_training_val);
 
     redFileSequences(str_path_activities, vec_activities);
-    redFileSequences(str_path_expAct, vec_examplesActions);
+    //redFileSequences(str_path_expAct, vec_examplesActions);
 }
