@@ -240,6 +240,8 @@ void Concat_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  string st
     float* EigenValSym = ToCreateMatrix1D(NFEATURES);
 
     vector<string> info_traj =  splitStr(str_path_trajectories,'/');
+    cout<<"[ "<<str_path_trajectories<<" ]"<<endl;
+    cout<<info_traj[info_traj.size()-1]<<endl;
 
     int num_scal_traj = 0;
     if(info_traj[info_traj.size()-2].compare("ImpTraj")==0 || info_traj[info_traj.size()-2].compare("DenseTraj")==0
@@ -365,7 +367,7 @@ void Concat_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  string st
             }
 
 
-            int cont_P =1;
+            int cont_P = 1;
 
             for(int i=0; i< NFEATURES; i++)
             {
@@ -441,7 +443,9 @@ void Concat_Rec_Log_CoV_splitLearning(vector<string>  vec_videos, string name_fi
     vector<string> info_traj =  splitStr(str_path_trajectories,'/');
 
 
-    cout<< " test 22 oct:  "<<info_traj[info_traj.size()-1]<< endl;
+    cout<< "...initializing:  "<<info_traj[info_traj.size()-1]<< endl;
+    cout<<"[ "<<str_path_trajectories<<" ]"<<endl;
+    cout<<info_traj[info_traj.size()-1]<<endl;
 
 
 
@@ -454,10 +458,10 @@ void Concat_Rec_Log_CoV_splitLearning(vector<string>  vec_videos, string name_fi
     }
     else if(info_traj[info_traj.size()-2].compare("EnstaTraj")==0)
     {
-        num_scal_traj =3;
+        num_scal_traj =3; cout<<"VIVE_LA_RESISTANCE"<<endl;
     }
 
-
+cout<<endl<<"SIZE: "<<vec_videos.size()<<endl<<endl;
     for(int k=0; k< vec_videos.size(); k++)
     {
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
@@ -491,8 +495,10 @@ void Concat_Rec_Log_CoV_splitLearning(vector<string>  vec_videos, string name_fi
         {
             int traj_used = num_traj_valides(sequenceKin_k[frame_index],  num_tot_traj_k);
             //cout << " numero de frame: "<< frame_index << " numTotalFrames_k: "<< numTotalFrames_k << " trajectories used "<< traj_used << endl;
+
             if(traj_used>100)
             {
+                //cout<<" traj_used (>100): "<<traj_used<<endl;
                 float **covmat_K = ToCreateMatrix2D(NFEATURES, NFEATURES); //Covariance Matrix buffer
                 ToInitMatrix2D(covmat_K, NFEATURES, NFEATURES);
                 //cout<<" entro cov"<< endl;
@@ -533,7 +539,7 @@ void Concat_Rec_Log_CoV_splitLearning(vector<string>  vec_videos, string name_fi
         //cont_tot_DifCov++;
         cout<< " cont_tot_DifCov: "<< cont_tot_DifCov << endl;
 ///-----------------------------------------------
-        if(cont_tot_DifCov >num_mean)
+        if(cont_tot_DifCov >num_mean && cont_tot_DifCov!=2) //GGARZON: && cont_tot_DifCov!=2
         {
 
 
@@ -570,6 +576,7 @@ void Concat_Rec_Log_CoV_splitLearning(vector<string>  vec_videos, string name_fi
 
 
 
+
 ///-----------------escribir ejemplos cada 1/alpha value
 
             int frame_jump =1/alpha_val;
@@ -583,8 +590,10 @@ void Concat_Rec_Log_CoV_splitLearning(vector<string>  vec_videos, string name_fi
 
             for(int iter_jump= frame_jump; iter_jump < cont_tot_DifCov; iter_jump = iter_jump+ (frame_jump/2) )
             {
+                //cout<<"frame_jump: "<<frame_jump<<endl;
+                //cout<<"iter_jump: "<<iter_jump<<" of "<<cont_tot_DifCov<<endl<<endl;
 
-                int cont_P =1;
+                int cont_P = 1;
                 //cout<< " entro "<< endl;
                 int label_k = atoi(returnLabelAction_KTH(vec_videos[k], vec_activities ).c_str()); //-1 para que la primera sea cero
                 outdata_mean_var<< label_k<< " ";
@@ -622,9 +631,11 @@ void Concat_Rec_Log_CoV_splitLearning(vector<string>  vec_videos, string name_fi
             outdata_mean_var<<endl;
             outdata_conc_all<<endl;
 
+
 //                cout<<" muestra numero:  "<< iter_jump << endl;
 //                cin.ignore();
             }
+
 
 
 
