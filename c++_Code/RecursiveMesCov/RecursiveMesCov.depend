@@ -1,0 +1,1624 @@
+# depslib dependency file v1.0
+1439368723 source:/home/fmartinez/Dropbox/CODE/POSDOC/KinematicPrimitives/GoMKByFeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<cv.h>
+	<highgui.h>
+	<opencv2/opencv.hpp>
+	"KinematicFeatures.h"
+	"../Resources/Matrixmanage.h"
+	"GoMKByFeat.h"
+
+1397211326 /usr/local/include/opencv/cv.h
+	"opencv2/core/core_c.h"
+	"opencv2/core/core.hpp"
+	"opencv2/imgproc/imgproc_c.h"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/video/tracking.hpp"
+	"opencv2/features2d/features2d.hpp"
+	"opencv2/flann/flann.hpp"
+	"opencv2/calib3d/calib3d.hpp"
+	"opencv2/objdetect/objdetect.hpp"
+	"opencv2/legacy/compat.hpp"
+	"opencv2/core/internal.hpp"
+
+1397211326 /usr/local/include/opencv2/core/core_c.h
+	"opencv2/core/types_c.h"
+
+1397211326 /usr/local/include/opencv2/core/types_c.h
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<float.h>
+	<stdint.h>
+	<intrin.h>
+	<emmintrin.h>
+	<fastmath.h>
+	<math.h>
+	<ipl.h>
+	<ipl/ipl.h>
+	"tegra_round.hpp"
+	"emmintrin.h"
+
+1397211326 /usr/local/include/opencv2/core/core.hpp
+	"opencv2/core/types_c.h"
+	"opencv2/core/version.hpp"
+	<limits.h>
+	<algorithm>
+	<cmath>
+	<cstddef>
+	<complex>
+	<map>
+	<new>
+	<string>
+	<vector>
+	<sstream>
+	"opencv2/core/operations.hpp"
+	"opencv2/core/mat.hpp"
+
+1397211326 /usr/local/include/opencv2/core/version.hpp
+
+1397211326 /usr/local/include/opencv2/core/operations.hpp
+	<string.h>
+	<limits.h>
+	<ext/atomicity.h>
+	<bits/atomicity.h>
+	<limits>
+
+1397211326 /usr/local/include/opencv2/core/mat.hpp
+	<limits.h>
+	<string.h>
+
+1397211326 /usr/local/include/opencv2/imgproc/imgproc_c.h
+	"opencv2/core/core_c.h"
+	"opencv2/imgproc/types_c.h"
+
+1397211326 /usr/local/include/opencv2/imgproc/types_c.h
+	"opencv2/core/core_c.h"
+
+1397211326 /usr/local/include/opencv2/imgproc/imgproc.hpp
+	"opencv2/core/core.hpp"
+	"opencv2/imgproc/types_c.h"
+
+1397211326 /usr/local/include/opencv2/video/tracking.hpp
+	"opencv2/core/core.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+
+1397211326 /usr/local/include/opencv2/features2d/features2d.hpp
+	"opencv2/core/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+	<limits>
+
+1397211326 /usr/local/include/opencv2/flann/miniflann.hpp
+	"opencv2/core/core.hpp"
+	"opencv2/flann/defines.h"
+
+1397211326 /usr/local/include/opencv2/flann/defines.h
+	"config.h"
+
+1397211326 /usr/local/include/opencv2/flann/config.h
+
+1397211326 /usr/local/include/opencv2/flann/flann.hpp
+	"opencv2/core/types_c.h"
+	"opencv2/core/core.hpp"
+	"opencv2/flann/flann_base.hpp"
+	"opencv2/flann/miniflann.hpp"
+
+1397211326 /usr/local/include/opencv2/flann/flann_base.hpp
+	<vector>
+	<string>
+	<cassert>
+	<cstdio>
+	"general.h"
+	"matrix.h"
+	"params.h"
+	"saving.h"
+	"all_indices.h"
+
+1397211326 /usr/local/include/opencv2/flann/general.h
+	"defines.h"
+	<stdexcept>
+	<cassert>
+
+1397211326 /usr/local/include/opencv2/flann/matrix.h
+	<stdio.h>
+	"general.h"
+
+1397211326 /usr/local/include/opencv2/flann/params.h
+	"any.h"
+	"general.h"
+	<iostream>
+	<map>
+
+1397211326 /usr/local/include/opencv2/flann/any.h
+	"defines.h"
+	<stdexcept>
+	<ostream>
+	<typeinfo>
+
+1397211326 /usr/local/include/opencv2/flann/saving.h
+	<cstring>
+	<vector>
+	"general.h"
+	"nn_index.h"
+
+1397211326 /usr/local/include/opencv2/flann/nn_index.h
+	<string>
+	"general.h"
+	"matrix.h"
+	"result_set.h"
+	"params.h"
+
+1397211326 /usr/local/include/opencv2/flann/result_set.h
+	<algorithm>
+	<cstring>
+	<iostream>
+	<limits>
+	<set>
+	<vector>
+
+1397211326 /usr/local/include/opencv2/flann/all_indices.h
+	"general.h"
+	"nn_index.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"hierarchical_clustering_index.h"
+	"lsh_index.h"
+	"autotuned_index.h"
+
+1397211326 /usr/local/include/opencv2/flann/kdtree_index.h
+	<algorithm>
+	<map>
+	<cassert>
+	<cstring>
+	"general.h"
+	"nn_index.h"
+	"dynamic_bitset.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1397211326 /usr/local/include/opencv2/flann/dynamic_bitset.h
+	<boost/dynamic_bitset.hpp>
+	<limits.h>
+	"dist.h"
+
+1397211326 /usr/local/include/opencv2/flann/dist.h
+	<cmath>
+	<cstdlib>
+	<string.h>
+	<stdint.h>
+	"defines.h"
+	<Intrin.h>
+	"arm_neon.h"
+
+1397211326 /usr/local/include/opencv2/flann/heap.h
+	<algorithm>
+	<vector>
+
+1397211326 /usr/local/include/opencv2/flann/allocator.h
+	<stdlib.h>
+	<stdio.h>
+
+1397211326 /usr/local/include/opencv2/flann/random.h
+	<algorithm>
+	<cstdlib>
+	<vector>
+	"general.h"
+
+1397211326 /usr/local/include/opencv2/flann/kdtree_single_index.h
+	<algorithm>
+	<map>
+	<cassert>
+	<cstring>
+	"general.h"
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1397211326 /usr/local/include/opencv2/flann/kmeans_index.h
+	<algorithm>
+	<string>
+	<map>
+	<cassert>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+	"logger.h"
+
+1397211326 /usr/local/include/opencv2/flann/logger.h
+	<stdio.h>
+	<stdarg.h>
+	"defines.h"
+
+1397211326 /usr/local/include/opencv2/flann/composite_index.h
+	"general.h"
+	"nn_index.h"
+	"kdtree_index.h"
+	"kmeans_index.h"
+
+1397211326 /usr/local/include/opencv2/flann/linear_index.h
+	"general.h"
+	"nn_index.h"
+
+1397211326 /usr/local/include/opencv2/flann/hierarchical_clustering_index.h
+	<algorithm>
+	<string>
+	<map>
+	<cassert>
+	<limits>
+	<cmath>
+	"general.h"
+	"nn_index.h"
+	"dist.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1397211326 /usr/local/include/opencv2/flann/lsh_index.h
+	<algorithm>
+	<cassert>
+	<cstring>
+	<map>
+	<vector>
+	"general.h"
+	"nn_index.h"
+	"matrix.h"
+	"result_set.h"
+	"heap.h"
+	"lsh_table.h"
+	"allocator.h"
+	"random.h"
+	"saving.h"
+
+1397211326 /usr/local/include/opencv2/flann/lsh_table.h
+	<algorithm>
+	<iostream>
+	<iomanip>
+	<limits.h>
+	<unordered_map>
+	<map>
+	<math.h>
+	<stddef.h>
+	"dynamic_bitset.h"
+	"matrix.h"
+
+1397211326 /usr/local/include/opencv2/flann/autotuned_index.h
+	"general.h"
+	"nn_index.h"
+	"ground_truth.h"
+	"index_testing.h"
+	"sampling.h"
+	"kdtree_index.h"
+	"kdtree_single_index.h"
+	"kmeans_index.h"
+	"composite_index.h"
+	"linear_index.h"
+	"logger.h"
+
+1397211326 /usr/local/include/opencv2/flann/ground_truth.h
+	"dist.h"
+	"matrix.h"
+
+1397211326 /usr/local/include/opencv2/flann/index_testing.h
+	<cstring>
+	<cassert>
+	<cmath>
+	"matrix.h"
+	"nn_index.h"
+	"result_set.h"
+	"logger.h"
+	"timer.h"
+
+1397211326 /usr/local/include/opencv2/flann/timer.h
+	<time.h>
+
+1397211326 /usr/local/include/opencv2/flann/sampling.h
+	"matrix.h"
+	"random.h"
+
+1397211326 /usr/local/include/opencv2/calib3d/calib3d.hpp
+	"opencv2/core/core.hpp"
+	"opencv2/features2d/features2d.hpp"
+
+1397211326 /usr/local/include/opencv2/objdetect/objdetect.hpp
+	"opencv2/core/core.hpp"
+	<map>
+	<deque>
+
+1397211326 /usr/local/include/opencv2/legacy/compat.hpp
+	"opencv2/core/core_c.h"
+	"opencv2/imgproc/types_c.h"
+	<math.h>
+	<string.h>
+
+1397211326 /usr/local/include/opencv2/core/internal.hpp
+	<vector>
+	"opencv2/core/core.hpp"
+	"opencv2/core/types_c.h"
+	<pthread.h>
+	"ipp.h"
+	"emmintrin.h"
+	"pmmintrin.h"
+	"tmmintrin.h"
+	<smmintrin.h>
+	<nmmintrin.h>
+	<immintrin.h>
+	<Intrin.h>
+	"arm_neon.h"
+	<arm_neon.h>
+	"tbb/tbb_stddef.h"
+	"tbb/tbb.h"
+	"tbb/task.h"
+	<Eigen/Core>
+	"opencv2/core/eigen.hpp"
+
+1397211326 /usr/local/include/opencv2/core/eigen.hpp
+	"opencv2/core/core_c.h"
+	"opencv2/core/core.hpp"
+
+1397211326 /usr/local/include/opencv/highgui.h
+	"opencv2/core/core_c.h"
+	"opencv2/core/core.hpp"
+	"opencv2/highgui/highgui_c.h"
+	"opencv2/highgui/highgui.hpp"
+
+1397211326 /usr/local/include/opencv2/highgui/highgui_c.h
+	"opencv2/core/core_c.h"
+
+1397211326 /usr/local/include/opencv2/highgui/highgui.hpp
+	"opencv2/core/core.hpp"
+	"opencv2/highgui/highgui_c.h"
+
+1397211326 /usr/local/include/opencv2/opencv.hpp
+	"opencv2/core/core_c.h"
+	"opencv2/core/core.hpp"
+	"opencv2/flann/miniflann.hpp"
+	"opencv2/imgproc/imgproc_c.h"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/photo/photo.hpp"
+	"opencv2/video/video.hpp"
+	"opencv2/features2d/features2d.hpp"
+	"opencv2/objdetect/objdetect.hpp"
+	"opencv2/calib3d/calib3d.hpp"
+	"opencv2/ml/ml.hpp"
+	"opencv2/highgui/highgui_c.h"
+	"opencv2/highgui/highgui.hpp"
+	"opencv2/contrib/contrib.hpp"
+
+1397211326 /usr/local/include/opencv2/photo/photo.hpp
+	"opencv2/core/core.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/photo/photo_c.h"
+
+1397211326 /usr/local/include/opencv2/photo/photo_c.h
+	"opencv2/core/core_c.h"
+
+1397211326 /usr/local/include/opencv2/video/video.hpp
+	"opencv2/video/tracking.hpp"
+	"opencv2/video/background_segm.hpp"
+
+1397211326 /usr/local/include/opencv2/video/background_segm.hpp
+	"opencv2/core/core.hpp"
+	<list>
+
+1397211326 /usr/local/include/opencv2/ml/ml.hpp
+	"opencv2/core/core.hpp"
+	<limits.h>
+	<map>
+	<string>
+	<iostream>
+
+1397211326 /usr/local/include/opencv2/contrib/contrib.hpp
+	"opencv2/core/core.hpp"
+	"opencv2/imgproc/imgproc.hpp"
+	"opencv2/features2d/features2d.hpp"
+	"opencv2/objdetect/objdetect.hpp"
+	"opencv2/contrib/retina.hpp"
+	"opencv2/contrib/openfabmap.hpp"
+
+1397211326 /usr/local/include/opencv2/contrib/retina.hpp
+	"opencv2/core/core.hpp"
+	<valarray>
+
+1397211326 /usr/local/include/opencv2/contrib/openfabmap.hpp
+	"opencv2/core/core.hpp"
+	"opencv2/features2d/features2d.hpp"
+	<vector>
+	<list>
+	<map>
+	<set>
+	<valarray>
+
+1428074506 /home/fmartinez/Dropbox/CODE/POSDOC/KinematicPrimitives/KinematicFeatures.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1454980129 /home/fmartinez/Dropbox/CODE/POSDOC/Resources/Matrixmanage.h
+	<opencv2/opencv.hpp>
+
+1435077918 /home/fmartinez/Dropbox/CODE/POSDOC/KinematicPrimitives/GoMKByFeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<cv.h>
+	<highgui.h>
+	<opencv2/opencv.hpp>
+
+1454424852 source:/home/fmartinez/Dropbox/CODE/POSDOC/KinematicPrimitives/KinematicFeatures.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1454424811 source:/home/fmartinez/Dropbox/CODE/POSDOC/KinematicPrimitives/OnlyKinematics.cpp
+	<iostream>
+	<math.h>
+	"OnlyKinematics.h"
+	<opencv2/opencv.hpp>
+
+1446645842 /home/fmartinez/Dropbox/CODE/POSDOC/KinematicPrimitives/OnlyKinematics.h
+
+1430831718 source:/home/fmartinez/Dropbox/CODE/POSDOC/KinematicPrimitives/RecursiveMSByFeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+	"KinematicFeatures.h"
+
+1455297002 source:/home/fmartinez/Dropbox/CODE/POSDOC/Resources/GeneralFunctions.cpp
+	<iostream>
+	<vector>
+	<string>
+	<sstream>
+	<fstream>
+	<opencv2/opencv.hpp>
+
+1455554486 source:/home/fmartinez/Dropbox/CODE/POSDOC/Resources/Matrixmanage.cpp
+	<opencv2/opencv.hpp>
+	<stdio.h>
+
+1458226597 source:/home/fmartinez/Dropbox/CODE/POSDOC/TrajManage/MatricialTrajectoryManage.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	"../Resources/Matrixmanage.h"
+	"../Resources/GeneralFunctions.h"
+	"MatricialTrajectoryManage.h"
+	"../KinematicPrimitives/RecursiveMSByFeat.h"
+	"../KinematicPrimitives/GoMKByFeat.h"
+	"../KinematicPrimitives/OnlyKinematics.h"
+
+1441696229 /home/fmartinez/Dropbox/CODE/POSDOC/Resources/GeneralFunctions.h
+	<iostream>
+	<vector>
+	<string>
+	<sstream>
+	<opencv2/opencv.hpp>
+
+1457355760 /home/fmartinez/Dropbox/CODE/POSDOC/TrajManage/MatricialTrajectoryManage.h
+
+1430831712 /home/fmartinez/Dropbox/CODE/POSDOC/KinematicPrimitives/RecursiveMSByFeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1454420133 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/Fast_Covariance/Fast_Covariance.cpp
+	"Fast_Covariance.h"
+	<iostream>
+
+1449578221 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/Fast_Covariance/Fast_Covariance.h
+
+1455558605 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Geodesics.cpp
+	<iostream>
+	<math.h>
+	"../NR3/nr3.h"
+	"../NR3/eigen_sym.h"
+	"../NR3/eigen_unsym.h"
+	"../NR3/ludcmp.h"
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+
+1427409579 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/NR3/nr3.h
+	<fstream>
+	<cmath>
+	<complex>
+	<iostream>
+	<iomanip>
+	<vector>
+	<limits>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<fcntl.h>
+	<string.h>
+	<ctype.h>
+
+1427408291 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/NR3/eigen_sym.h
+
+1427408295 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/NR3/eigen_unsym.h
+
+1427408313 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/NR3/ludcmp.h
+
+1449663681 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/ManageMat_OPS.h
+	"../NR3/nr3.h"
+
+1455558592 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Geodesics.h
+
+1456325136 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Grad_des_Mean.cpp
+	<iostream>
+	<math.h>
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Riemannian_distances.h"
+	"Grad_des_Mean.h"
+
+1447778836 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Riemannian_distances.h
+
+1456323851 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Grad_des_Mean.h
+	"ManageMat_OPS.h"
+
+1456324764 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Interface_NR3_Float.cpp
+	"../NR3/nr3.h"
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Interface_NR3_Float.h"
+	"Grad_des_Mean.h"
+	"Riemannian_distances.h"
+
+1456324797 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Interface_NR3_Float.h
+	<iostream>
+	<string>
+	<vector>
+
+1452008583 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/ManageMat_OPS.cpp
+	<iostream>
+	<math.h>
+	"../NR3/nr3.h"
+	"../NR3/cholesky.h"
+	"../NR3/gaussj.h"
+	"ManageMat_OPS.h"
+
+1427408257 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/NR3/cholesky.h
+
+1427409066 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/NR3/gaussj.h
+
+1453797268 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Riemannian_distances.cpp
+	<iostream>
+	<math.h>
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Riemannian_distances.h"
+
+1458229581 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Config.h"
+	"RecursiveCov.h"
+	"IntrinsecMeanVar.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+
+1458229600 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/Config.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1454952223 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/RecursiveCov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1439368723 source:/home/fmartinezc/Dropbox/CODE/POSDOC/KinematicPrimitives/GoMKByFeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<cv.h>
+	<highgui.h>
+	<opencv2/opencv.hpp>
+	"KinematicFeatures.h"
+	"../Resources/Matrixmanage.h"
+	"GoMKByFeat.h"
+
+1428074506 /home/fmartinezc/Dropbox/CODE/POSDOC/KinematicPrimitives/KinematicFeatures.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1454980129 /home/fmartinezc/Dropbox/CODE/POSDOC/Resources/Matrixmanage.h
+	<opencv2/opencv.hpp>
+
+1435077918 /home/fmartinezc/Dropbox/CODE/POSDOC/KinematicPrimitives/GoMKByFeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<cv.h>
+	<highgui.h>
+	<opencv2/opencv.hpp>
+
+1454424852 source:/home/fmartinezc/Dropbox/CODE/POSDOC/KinematicPrimitives/KinematicFeatures.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1454424811 source:/home/fmartinezc/Dropbox/CODE/POSDOC/KinematicPrimitives/OnlyKinematics.cpp
+	<iostream>
+	<math.h>
+	"OnlyKinematics.h"
+	<opencv2/opencv.hpp>
+
+1446645842 /home/fmartinezc/Dropbox/CODE/POSDOC/KinematicPrimitives/OnlyKinematics.h
+
+1430831718 source:/home/fmartinezc/Dropbox/CODE/POSDOC/KinematicPrimitives/RecursiveMSByFeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+	"KinematicFeatures.h"
+
+1458724967 source:/home/fmartinezc/Dropbox/CODE/POSDOC/Resources/GeneralFunctions.cpp
+	<iostream>
+	<vector>
+	<string>
+	<sstream>
+	<fstream>
+	<opencv2/opencv.hpp>
+
+1455554486 source:/home/fmartinezc/Dropbox/CODE/POSDOC/Resources/Matrixmanage.cpp
+	<opencv2/opencv.hpp>
+	<stdio.h>
+
+1458725408 source:/home/fmartinezc/Dropbox/CODE/POSDOC/TrajManage/MatricialTrajectoryManage.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	"../Resources/Matrixmanage.h"
+	"../Resources/GeneralFunctions.h"
+	"MatricialTrajectoryManage.h"
+	"../KinematicPrimitives/RecursiveMSByFeat.h"
+	"../KinematicPrimitives/GoMKByFeat.h"
+	"../KinematicPrimitives/OnlyKinematics.h"
+
+1458724988 /home/fmartinezc/Dropbox/CODE/POSDOC/Resources/GeneralFunctions.h
+	<iostream>
+	<vector>
+	<string>
+	<sstream>
+	<opencv2/opencv.hpp>
+
+1457355760 /home/fmartinezc/Dropbox/CODE/POSDOC/TrajManage/MatricialTrajectoryManage.h
+
+1430831712 /home/fmartinezc/Dropbox/CODE/POSDOC/KinematicPrimitives/RecursiveMSByFeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1454420133 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Fast_Covariance/Fast_Covariance.cpp
+	"Fast_Covariance.h"
+	<iostream>
+
+1449578221 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Fast_Covariance/Fast_Covariance.h
+
+1455558605 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Geodesics.cpp
+	<iostream>
+	<math.h>
+	"../NR3/nr3.h"
+	"../NR3/eigen_sym.h"
+	"../NR3/eigen_unsym.h"
+	"../NR3/ludcmp.h"
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+
+1427409579 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/NR3/nr3.h
+	<fstream>
+	<cmath>
+	<complex>
+	<iostream>
+	<iomanip>
+	<vector>
+	<limits>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<fcntl.h>
+	<string.h>
+	<ctype.h>
+
+1427408291 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/NR3/eigen_sym.h
+
+1427408295 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/NR3/eigen_unsym.h
+
+1427408313 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/NR3/ludcmp.h
+
+1449663681 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/ManageMat_OPS.h
+	"../NR3/nr3.h"
+
+1455558592 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Geodesics.h
+
+1456325136 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Grad_des_Mean.cpp
+	<iostream>
+	<math.h>
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Riemannian_distances.h"
+	"Grad_des_Mean.h"
+
+1447778836 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Riemannian_distances.h
+
+1456323851 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Grad_des_Mean.h
+	"ManageMat_OPS.h"
+
+1456324764 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Interface_NR3_Float.cpp
+	"../NR3/nr3.h"
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Interface_NR3_Float.h"
+	"Grad_des_Mean.h"
+	"Riemannian_distances.h"
+
+1456324797 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Interface_NR3_Float.h
+	<iostream>
+	<string>
+	<vector>
+
+1452008583 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/ManageMat_OPS.cpp
+	<iostream>
+	<math.h>
+	"../NR3/nr3.h"
+	"../NR3/cholesky.h"
+	"../NR3/gaussj.h"
+	"ManageMat_OPS.h"
+
+1427408257 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/NR3/cholesky.h
+
+1427409066 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/NR3/gaussj.h
+
+1453797268 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/Gradien_descent_Mean/Riemannian_distances.cpp
+	<iostream>
+	<math.h>
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Riemannian_distances.h"
+
+1458725434 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Config.h"
+	"RecursiveCov.h"
+	"Weka_IntrinsecMeanVar.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+
+1458725787 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/Config.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1454952223 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/RecursiveCov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1456395702 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/RecursiveCov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1456324361 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/IntrinsecMeanVar.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1458143766 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/IntrinsecMeanVar.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"IntrinsecMeanVar.h"
+	"RecursiveCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1455560194 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/Recursive_Riemannian_Cov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1455697689 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/Recursive_Riemannian_Cov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Recursive_Riemannian_Cov.h"
+	"RecursiveCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1458143766 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/IntrinsecMeanVar.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"IntrinsecMeanVar.h"
+	"RecursiveCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1456324361 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/IntrinsecMeanVar.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1455697689 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/Recursive_Riemannian_Cov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Recursive_Riemannian_Cov.h"
+	"RecursiveCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1455560194 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/Recursive_Riemannian_Cov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1456395702 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/RecursiveCov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1457096580 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/ConcatRecLogCov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"ConcatRecLogCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1455808441 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/ConcatRecLogCov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1457096580 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/ConcatRecLogCov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"ConcatRecLogCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1455808441 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/ConcatRecLogCov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1457544081 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/AppareanceTrajectoryFeatures/apperFeatTraj.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<math.h>
+	<opencv2/opencv.hpp>
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+
+1457537427 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/WithAppareancefeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"ConcatRecLogCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+	"../AppareanceTrajectoryFeatures/apperFeatTraj.h"
+
+1457368666 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/AppareanceTrajectoryFeatures/apperFeatTraj.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1457372832 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/WithAppareancefeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1457544081 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/AppareanceTrajectoryFeatures/apperFeatTraj.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<math.h>
+	<opencv2/opencv.hpp>
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+
+1457537427 source:/home/fmartinez/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/WithAppareancefeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"ConcatRecLogCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+	"../AppareanceTrajectoryFeatures/apperFeatTraj.h"
+
+1457368666 /home/fmartinez/Dropbox/CODE/Riemannian_CODE/AppareanceTrajectoryFeatures/apperFeatTraj.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1458725320 /home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/Weka_IntrinsecMeanVar.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1458726370 source:/home/fmartinezc/Dropbox/CODE/Riemannian_CODE/RecursiveMesCov/Weka_IntrinsecMeanVar.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Weka_IntrinsecMeanVar.h"
+	"RecursiveCov.h"
+	"../../POSDOC/Resources/GeneralFunctions.h"
+	"../../POSDOC/Resources/Matrixmanage.h"
+	"../../POSDOC/TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1540565086 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/AppareanceTrajectoryFeatures/apperFeatTraj.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<math.h>
+	<opencv2/opencv.hpp>
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+
+1533134752 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Resources/GeneralFunctions.h
+	<iostream>
+	<vector>
+	<string>
+	<sstream>
+	<opencv2/opencv.hpp>
+
+1533134752 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Resources/Matrixmanage.h
+	<opencv2/opencv.hpp>
+
+1533134909 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Fast_Covariance/Fast_Covariance.cpp
+	"Fast_Covariance.h"
+	<iostream>
+
+1533134909 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Fast_Covariance/Fast_Covariance.h
+
+1533134909 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/Geodesics.cpp
+	<iostream>
+	<math.h>
+	"../NR3/nr3.h"
+	"../NR3/eigen_sym.h"
+	"../NR3/eigen_unsym.h"
+	"../NR3/ludcmp.h"
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+
+1533134920 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/NR3/nr3.h
+	<fstream>
+	<cmath>
+	<complex>
+	<iostream>
+	<iomanip>
+	<vector>
+	<limits>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<fcntl.h>
+	<string.h>
+	<ctype.h>
+
+1533134920 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/NR3/eigen_sym.h
+
+1533134920 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/NR3/eigen_unsym.h
+
+1533134920 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/NR3/ludcmp.h
+
+1533134909 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/ManageMat_OPS.h
+	"../NR3/nr3.h"
+
+1533134909 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/Geodesics.h
+
+1540219024 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/Grad_des_Mean.cpp
+	<iostream>
+	<math.h>
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Riemannian_distances.h"
+	"Grad_des_Mean.h"
+
+1533134909 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/Riemannian_distances.h
+
+1533134909 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/Grad_des_Mean.h
+	"ManageMat_OPS.h"
+
+1533134909 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/Interface_NR3_Float.cpp
+	"../NR3/nr3.h"
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Interface_NR3_Float.h"
+	"Grad_des_Mean.h"
+	"Riemannian_distances.h"
+
+1533134909 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/Interface_NR3_Float.h
+	<iostream>
+	<string>
+	<vector>
+
+1533134909 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/ManageMat_OPS.cpp
+	<iostream>
+	<math.h>
+	"../NR3/nr3.h"
+	"../NR3/cholesky.h"
+	"../NR3/gaussj.h"
+	"ManageMat_OPS.h"
+
+1533134920 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/NR3/cholesky.h
+
+1533134920 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/NR3/gaussj.h
+
+1533134909 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Gradien_descent_Mean/Riemannian_distances.cpp
+	<iostream>
+	<math.h>
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Riemannian_distances.h"
+
+1533134719 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/KinematicPrimitives/GoMKByFeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<cv.h>
+	<highgui.h>
+	<opencv2/opencv.hpp>
+	"KinematicFeatures.h"
+	"../Resources/Matrixmanage.h"
+	"GoMKByFeat.h"
+
+1533134719 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/KinematicPrimitives/KinematicFeatures.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1533134719 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/KinematicPrimitives/GoMKByFeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<cv.h>
+	<highgui.h>
+	<opencv2/opencv.hpp>
+
+1533134719 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/KinematicPrimitives/KinematicFeatures.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1533134719 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/KinematicPrimitives/OnlyKinematics.cpp
+	<iostream>
+	<math.h>
+	"OnlyKinematics.h"
+	<opencv2/opencv.hpp>
+
+1533134719 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/KinematicPrimitives/OnlyKinematics.h
+
+1533134719 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/KinematicPrimitives/RecursiveMSByFeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+	"KinematicFeatures.h"
+
+1533134752 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Resources/GeneralFunctions.cpp
+	<iostream>
+	<vector>
+	<string>
+	<sstream>
+	<fstream>
+	<opencv2/opencv.hpp>
+
+1533134752 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/Resources/Matrixmanage.cpp
+	<opencv2/opencv.hpp>
+	<stdio.h>
+
+1540220909 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/TrajManage/MatricialTrajectoryManage.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	"../Resources/Matrixmanage.h"
+	"../Resources/GeneralFunctions.h"
+	"MatricialTrajectoryManage.h"
+	"../KinematicPrimitives/RecursiveMSByFeat.h"
+	"../KinematicPrimitives/GoMKByFeat.h"
+	"../KinematicPrimitives/OnlyKinematics.h"
+
+1533134772 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/TrajManage/MatricialTrajectoryManage.h
+
+1533134719 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/KinematicPrimitives/RecursiveMSByFeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1540565116 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/ConcatRecLogCov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"ConcatRecLogCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1533134922 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/RecursiveCov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1533134922 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/ConcatRecLogCov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1540565314 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/IntrinsecMeanVar.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"IntrinsecMeanVar.h"
+	"RecursiveCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1533134922 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/IntrinsecMeanVar.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1540565284 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Config.h"
+	"RecursiveCov.h"
+	"../Resources/GeneralFunctions.h"
+
+1533134922 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/Config.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1540565336 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/Recursive_Riemannian_Cov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Recursive_Riemannian_Cov.h"
+	"RecursiveCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1533134922 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/Recursive_Riemannian_Cov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1540565351 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/RecursiveCov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1540565367 source:/home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/Weka_IntrinsecMeanVar.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Weka_IntrinsecMeanVar.h"
+	"RecursiveCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1533134922 /home/fmartinezc/main/research/code/2018-Riemannian-journal/c++_Code/RecursiveMesCov/Weka_IntrinsecMeanVar.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
