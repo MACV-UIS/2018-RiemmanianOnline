@@ -437,6 +437,11 @@ void Concat_Rec_Log_CoV_splitLearning(vector<string>  vec_videos, string name_fi
     outdata_conc_all.precision(10);
     outdata_conc_all<<  fixed;
 
+    //ggarzon
+    ofstream outdata_mean_var_sel((name_file + "mean_var_selected.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_mean_var_sel.precision(10);
+    outdata_mean_var_sel<<  fixed;
+
     float** submat = ToCreateMatrix2D(NFEATURES, NFEATURES);
     float* EigenValSym = ToCreateMatrix1D(NFEATURES);
 
@@ -598,8 +603,9 @@ cout<<endl<<"SIZE: "<<vec_videos.size()<<endl<<endl;
                 int label_k = atoi(returnLabelAction_KTH(vec_videos[k], vec_activities ).c_str()); //-1 para que la primera sea cero
                 outdata_mean_var<< label_k<< " ";
                 outdata_conc_all<< label_k<< " ";
+                outdata_mean_var_sel<< label_k<< " "; //ggarzon
 
-                for(int i=0; i< NFEATURES; i++)
+                /*for(int i=0; i< NFEATURES; i++)
                 {
                     for(int j=i; j< NFEATURES; j++)
                     {
@@ -626,7 +632,7 @@ cout<<endl<<"SIZE: "<<vec_videos.size()<<endl<<endl;
 
                 for(int i=0; i< NFEATURES; i++)
                     for(int j=i; j< NFEATURES; j++)
-                        outdata_conc_all<< cont_P++ << ":"<<array_max[cont_tot_DifCov-1][i][j] << " ";
+                        outdata_conc_all<< cont_P++ << ":"<<array_max[cont_tot_DifCov-1][i][j] << " ";*/
 
             outdata_mean_var<<endl;
             outdata_conc_all<<endl;
@@ -634,6 +640,42 @@ cout<<endl<<"SIZE: "<<vec_videos.size()<<endl<<endl;
 
 //                cout<<" muestra numero:  "<< iter_jump << endl;
 //                cin.ignore();
+
+
+                //ggarzon
+                int selected = 5;
+                cont_P = 1;
+
+                for(int i=0; i< NFEATURES; i++)
+                {
+                    if(i>=selected){ continue; }
+                    for(int j=i; j< NFEATURES; j++)
+                    {
+                        if(j>=selected){ continue; }
+                        outdata_mean_var_sel<< cont_P << ":"<<array_mean[iter_jump][i][j] << " ";
+                        cont_P++;
+                    }
+                }
+
+
+                for(int i=0; i< NFEATURES; i++)
+                {
+                    if(i>=selected){ continue; }
+                    for(int j=i; j< NFEATURES; j++)
+                    {
+                        if(j>=selected){ continue; }
+                        outdata_mean_var_sel<< cont_P << ":"<<array_var[iter_jump][i][j] << " ";
+                        cont_P++;
+                    }
+                }
+
+                outdata_mean_var_sel<<endl;
+
+
+
+
+
+
             }
 
 
@@ -655,6 +697,7 @@ cout<<endl<<"SIZE: "<<vec_videos.size()<<endl<<endl;
     ToEliminateMatrix1D(EigenValSym, NFEATURES);
     outdata_mean_var.close();
     outdata_conc_all.close();
+    outdata_mean_var_sel.close(); //ggarzon
 
 }
 

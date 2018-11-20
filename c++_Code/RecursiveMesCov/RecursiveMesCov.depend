@@ -1622,3 +1622,422 @@
 	<string>
 	<vector>
 
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/AppareanceTrajectoryFeatures/apperFeatTraj.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<math.h>
+	<opencv2/opencv.hpp>
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Resources/GeneralFunctions.h
+	<iostream>
+	<vector>
+	<string>
+	<sstream>
+	<opencv2/opencv.hpp>
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Resources/Matrixmanage.h
+	<opencv2/opencv.hpp>
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Fast_Covariance/Fast_Covariance.cpp
+	"Fast_Covariance.h"
+	<iostream>
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Fast_Covariance/Fast_Covariance.h
+
+1540866085 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/Geodesics.cpp
+	<iostream>
+	<math.h>
+	"../NR3/nr3.h"
+	"../NR3/eigen_sym.h"
+	"../NR3/eigen_unsym.h"
+	"../NR3/ludcmp.h"
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/NR3/nr3.h
+	<fstream>
+	<cmath>
+	<complex>
+	<iostream>
+	<iomanip>
+	<vector>
+	<limits>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<fcntl.h>
+	<string.h>
+	<ctype.h>
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/NR3/eigen_sym.h
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/NR3/eigen_unsym.h
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/NR3/ludcmp.h
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/ManageMat_OPS.h
+	"../NR3/nr3.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/Geodesics.h
+
+1542322893 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/Grad_des_Mean.cpp
+	<iostream>
+	<math.h>
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Riemannian_distances.h"
+	"Grad_des_Mean.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/Riemannian_distances.h
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/Grad_des_Mean.h
+	"ManageMat_OPS.h"
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/Interface_NR3_Float.cpp
+	"../NR3/nr3.h"
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Interface_NR3_Float.h"
+	"Grad_des_Mean.h"
+	"Riemannian_distances.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/Interface_NR3_Float.h
+	<iostream>
+	<string>
+	<vector>
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/ManageMat_OPS.cpp
+	<iostream>
+	<math.h>
+	"../NR3/nr3.h"
+	"../NR3/cholesky.h"
+	"../NR3/gaussj.h"
+	"ManageMat_OPS.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/NR3/cholesky.h
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/NR3/gaussj.h
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Gradien_descent_Mean/Riemannian_distances.cpp
+	<iostream>
+	<math.h>
+	"ManageMat_OPS.h"
+	"Geodesics.h"
+	"Riemannian_distances.h"
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/KinematicPrimitives/GoMKByFeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<cv.h>
+	<highgui.h>
+	<opencv2/opencv.hpp>
+	"KinematicFeatures.h"
+	"../Resources/Matrixmanage.h"
+	"GoMKByFeat.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/KinematicPrimitives/KinematicFeatures.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/KinematicPrimitives/GoMKByFeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<cv.h>
+	<highgui.h>
+	<opencv2/opencv.hpp>
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/KinematicPrimitives/KinematicFeatures.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/KinematicPrimitives/OnlyKinematics.cpp
+	<iostream>
+	<math.h>
+	"OnlyKinematics.h"
+	<opencv2/opencv.hpp>
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/KinematicPrimitives/OnlyKinematics.h
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/KinematicPrimitives/RecursiveMSByFeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+	"KinematicFeatures.h"
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Resources/GeneralFunctions.cpp
+	<iostream>
+	<vector>
+	<string>
+	<sstream>
+	<fstream>
+	<opencv2/opencv.hpp>
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/Resources/Matrixmanage.cpp
+	<opencv2/opencv.hpp>
+	<stdio.h>
+
+1542398754 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/TrajManage/MatricialTrajectoryManage.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	"../Resources/Matrixmanage.h"
+	"../Resources/GeneralFunctions.h"
+	"MatricialTrajectoryManage.h"
+	"../KinematicPrimitives/RecursiveMSByFeat.h"
+	"../KinematicPrimitives/GoMKByFeat.h"
+	"../KinematicPrimitives/OnlyKinematics.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/TrajManage/MatricialTrajectoryManage.h
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/KinematicPrimitives/RecursiveMSByFeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	<vector>
+	<opencv2/opencv.hpp>
+
+1542398782 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/ConcatRecLogCov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"ConcatRecLogCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/RecursiveCov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/ConcatRecLogCov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1542325635 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/IntrinsecMeanVar.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"IntrinsecMeanVar.h"
+	"RecursiveCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/IntrinsecMeanVar.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1542333514 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Config.h"
+	"RecursiveCov.h"
+	"IntrinsecMeanVar.h"
+	"Weka_IntrinsecMeanVar.h"
+	"Recursive_Riemannian_Cov.h"
+	"ConcatRecLogCov.h"
+	"WithAppareancefeat.h"
+	"../Resources/GeneralFunctions.h"
+
+1540582342 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/Config.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1540866497 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/Recursive_Riemannian_Cov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Recursive_Riemannian_Cov.h"
+	"RecursiveCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/Recursive_Riemannian_Cov.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1540588573 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/RecursiveCov.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/Weka_IntrinsecMeanVar.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"Weka_IntrinsecMeanVar.h"
+	"RecursiveCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/Weka_IntrinsecMeanVar.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1540581386 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/WithAppareancefeat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<math.h>
+	<cstdlib>
+	"RecursiveCov.h"
+	"ConcatRecLogCov.h"
+	"../Resources/GeneralFunctions.h"
+	"../Resources/Matrixmanage.h"
+	"../TrajManage/MatricialTrajectoryManage.h"
+	"../Gradien_descent_Mean/Interface_NR3_Float.h"
+	"../Fast_Covariance/Fast_Covariance.h"
+	"../AppareanceTrajectoryFeatures/apperFeatTraj.h"
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/AppareanceTrajectoryFeatures/apperFeatTraj.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+
+1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/WithAppareancefeat.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<vector>
+

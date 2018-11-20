@@ -243,7 +243,7 @@ void Recursive_mean(vector<string>  vec_videos, string name_file,  string str_pa
 
 
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
-        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".scale";
+        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
 
 
 

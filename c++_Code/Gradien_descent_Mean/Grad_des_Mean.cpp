@@ -155,7 +155,7 @@ void  compute_grad_mean_Fletcher(vector<MatDoub> vect_Matdoub, MatDoub &mean_deg
 
         dist_temp =difussion_dist(mat_iter);
         cont++;
-        cout << " measure of error: "<<difussion_dist(mat_iter)<< " cont: " << cont << " total mat:  " << vect_Matdoub.size()<<  endl;
+        //cout << " measure of error: "<<difussion_dist(mat_iter)<< " cont: " << cont << " total mat:  " << vect_Matdoub.size()<<  endl;
         restart_mat(mat_iter);
 
     }

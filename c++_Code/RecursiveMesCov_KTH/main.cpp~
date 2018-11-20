@@ -22,7 +22,7 @@ vector<string> vec_test, vect_training_val;
 
 void ToLoadFiles();
 
-int KIN_NFEATURES=12;///incluyendo x, y,t //((int)featLabels.size()*(int)alphaScales.size())+3; 9 features + x,y,z //12
+int KIN_NFEATURES=12;///incluyendo x, y,t //((int)featLabels.size()*(int)alphaScales.size())+3; 9 features + x,y,z
 int APP_NFEATURES=6;
 /// La idea principal es contruir los experimentos para el paper, desarrollando unicamente los datos que seran utilizados
 
@@ -33,11 +33,11 @@ int main()
     cout<<" vec test: "<< vec_test.size() << " vec train: "<< vect_training_val.size() << " vec activities: "<< vec_activities.size() << endl;
 
     /// To compute training complete sequences
-    //Concat_Rec_Log_CoV(vec_test, "test_concMes_DF_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0);
-    //Concat_Rec_Log_CoV(vect_training_val, "train_concMes_DF_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0);
+    Concat_Rec_Log_CoV(vec_test, "test_concMes_DF_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0);
+    Concat_Rec_Log_CoV(vect_training_val, "train_concMes_DF_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0);
 
-    Concat_Rec_Log_CoV_splitLearning(vect_training_val, "Gtrain_concMes_IFs_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 3.0);
-    Concat_Rec_Log_CoV_splitLearning(vec_test, "Gtest_concMes_IFs_24_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 3.0); //4.0
+    //Concat_Rec_Log_CoV_splitLearning(vect_training_val, "Gtrain_concMes_IFs_25_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0);
+    //Concat_Rec_Log_CoV_splitLearning(vec_test, "Gtest_concMes_IFs_24_",  str_path_trajectories, vec_activities,  KIN_NFEATURES, 1, 10.0); //4.0
 
 
 

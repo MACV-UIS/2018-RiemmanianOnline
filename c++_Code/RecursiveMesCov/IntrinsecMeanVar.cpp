@@ -67,7 +67,7 @@ void Intrinsec_Mean_Var_tDiv_Iterative(vector<string>  vec_videos, string name_f
     for(int k=0; k< vec_videos.size(); k++)
     {
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
-        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".scale";
+        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
 
         int numTotalFrames_k, heightFrame_k, widthFrame_k, num_tot_traj_k;
         infoVideoFromTrajecAllScales(path_textTrajectories_k, numTotalFrames_k,
@@ -474,7 +474,7 @@ void Intrinsec_Mean_Var_tDiv(vector<string>  vec_videos, string name_file,  stri
 
 
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
-        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".scale";
+        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
 
 
 
@@ -514,7 +514,7 @@ void Intrinsec_Mean_Var_tDiv(vector<string>  vec_videos, string name_file,  stri
             {
                 float **covmat_K = ToCreateMatrix2D(NFEATURES, NFEATURES); //Covariance Matrix buffer
                 ToInitMatrix2D(covmat_K, NFEATURES, NFEATURES);
-                //cout<<" entro cov"<< endl;
+                //cout<<" entro cov"<< endl;Intrinsec_Mean_Var_tDiv
                 ToComputeCovmat(covmat_K, sequenceKin_k[frame_index],  NFEATURES, num_tot_traj_k, heightFrame_k, widthFrame_k);
 
                 //cin.ignore();
@@ -796,6 +796,10 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
     outdata_LogMeanVarR.precision(10);
     outdata_LogMeanVarR<<  fixed;
 
+    ofstream outdata_all_cov((name_file +"all_cov.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_all_cov.precision(10);
+    outdata_all_cov<<  fixed;
+
 
     float** submat = ToCreateMatrix2D(NFEATURES, NFEATURES);
     float* EigenValSym = ToCreateMatrix1D(NFEATURES);
@@ -804,7 +808,7 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
     {
 
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
-        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".scale";
+        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
         //cin.ignore();
 
 
@@ -924,7 +928,7 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
             outdata_LogVarR<< label_k<< " ";
             outdata_LogMeanVar<< label_k<< " ";
             outdata_LogMeanVarR<< label_k<< " ";
-
+            outdata_all_cov<< label_k<< " ";
 //            //cout<< " hizo lo de  "<< endl;
             float** _mean = ToCreateMatrix2D(NFEATURES, NFEATURES);
             ToInitMatrix2D(_mean, NFEATURES, NFEATURES);
@@ -939,6 +943,76 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
             ToInitMatrix2D(Log_var2, NFEATURES, NFEATURES);
             float** Log_var4 = ToCreateMatrix2D(NFEATURES, NFEATURES);
             ToInitMatrix2D(Log_var4, NFEATURES, NFEATURES);
+
+
+
+
+
+
+
+
+
+
+
+
+            ///famarcar_15Nov
+            int t_Div = 4; // numero de divisiones
+            int div_fix=(cont_tot_DifCov/t_Div);
+            cout<< " divisiones que corresponden: "<< div_fix << endl;
+            int cont_P_all =1;
+
+
+            for( int cont_fix =0; cont_fix< t_Div; cont_fix++ )
+            {
+                //cout<< " entro a dividir"<< endl;
+                //cout<< "div_fix" << endl;
+                float*** temp_split_vec = ToCreateMatrix3D(div_fix, NFEATURES, NFEATURES);
+                ToInitMatrix3D(temp_split_vec, div_fix, NFEATURES, NFEATURES);
+
+
+                int index_temp =0;
+                for(int n_div= div_fix*cont_fix; n_div < div_fix*(cont_fix+1); n_div++ )
+                {
+                    Copy_Cov(arr_cov[n_div], temp_split_vec[index_temp],NFEATURES);
+
+                    index_temp++;
+                }
+
+
+                float** _mean_a = ToCreateMatrix2D(NFEATURES, NFEATURES);
+                float** L_mean_a = ToCreateMatrix2D(NFEATURES, NFEATURES);
+                ToInitMatrix2D(_mean_a, NFEATURES, NFEATURES);
+                ToInitMatrix2D(L_mean_a, NFEATURES, NFEATURES);
+                //cout<< "index_temp sss: "<< index_temp<< endl;
+                float distAB =0.0;
+                float_grad_mean_Array_Fletcher(temp_split_vec, _mean_a, div_fix, NFEATURES);
+                float_Log_A_resp_I(_mean_a, L_mean_a,  NFEATURES, distAB);
+
+                for(int i=0; i< NFEATURES; i++){
+                    for(int j=i; j< NFEATURES; j++){
+                        outdata_all_cov<< cont_P_all << ":"<<L_mean_a[i][j] << " ";
+                        cont_P_all++;
+                }}
+
+
+                ToEliminateMatrix2D(_mean_a, NFEATURES, NFEATURES);
+                ToEliminateMatrix2D(L_mean_a, NFEATURES, NFEATURES);
+                ToEliminateMatrix3D(temp_split_vec, div_fix, NFEATURES, NFEATURES);
+            }
+            outdata_all_cov<<endl;
+            ///
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             float distAB =0.0;
@@ -1037,6 +1111,7 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
     //outdata_meanW.close();
     outdata_LogVar.close();
     outdata_LogVarR.close();
+    outdata_all_cov.close();
 
 }
 
@@ -1047,6 +1122,10 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
 void Intrinsec_Mean_Var(vector<string>  vec_videos, string name_file,  string str_path_trajectories,
                         vector<string> vec_activities, int NFEATURES, int num_mean, float init_alpha)
 {
+    //ggarzon
+    ofstream outdata_meanCV_var3CV((name_file +"meanCV-var3CV.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_meanCV_var3CV.precision(10);
+    outdata_meanCV_var3CV<<  fixed;
 
     // The experiments were carried out with LED
     ofstream outdata_meanCV((name_file +"meanCV.txt").c_str(), fstream::out); //1 means numero de divisiones del video
@@ -1090,7 +1169,7 @@ void Intrinsec_Mean_Var(vector<string>  vec_videos, string name_file,  string st
     {
 
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
-        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".scale";
+        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
 
 
 
@@ -1203,6 +1282,7 @@ void Intrinsec_Mean_Var(vector<string>  vec_videos, string name_file,  string st
             //cout<< " entro "<< endl;
             int label_k = atoi(returnLabelAction_KTH(vec_videos[k], vec_activities ).c_str()); //-1 para que la primera sea cero
 
+            outdata_meanCV_var3CV<< label_k<< " "; //ggarzon
             outdata_meanCV<< label_k<< " ";
             outdata_meanSV<< label_k<< " ";
             outdata_var2CV<< label_k<< " ";
@@ -1245,7 +1325,7 @@ void Intrinsec_Mean_Var(vector<string>  vec_videos, string name_file,  string st
             float distAB =0.0;
             float_grad_mean_Array_Fletcher(arr_cov, _mean, cont_tot_DifCov, NFEATURES);
 
-            cin.ignore();
+            //cin.ignore();
             cout<< " covariance original" << endl;
             ToPrintMatrix2D(_mean, NFEATURES, NFEATURES);
 
@@ -1368,6 +1448,27 @@ void Intrinsec_Mean_Var(vector<string>  vec_videos, string name_file,  string st
 
 
 
+
+
+
+
+
+
+            //ggarzon
+            cont_P = 1;
+            for(int i=0; i< NFEATURES; i++)
+                for(int j=i; j< NFEATURES; j++)
+                    outdata_meanCV_var3CV<< cont_P++ << ":"<<Log_mean[i][j] << " ";
+
+            for(int i=0; i< NFEATURES; i++)
+                for(int j=i; j< NFEATURES; j++)
+                    outdata_meanCV_var3CV<< cont_P++ << ":"<<Log_var2[i][j]/cont_tot_DifCov << " ";
+
+            outdata_meanCV_var3CV<<endl;
+
+
+
+
             ToEliminateMatrix2D(_mean, NFEATURES, NFEATURES);
             ToEliminateMatrix2D(Log_mean, NFEATURES, NFEATURES);
 
@@ -1389,6 +1490,9 @@ void Intrinsec_Mean_Var(vector<string>  vec_videos, string name_file,  string st
 
     ToEliminateMatrix2D(submat, NFEATURES, NFEATURES);
     ToEliminateMatrix1D(EigenValSym, NFEATURES);
+
+
+    outdata_meanCV_var3CV.close(); //ggarzon
 
     outdata_meanCV.close();
     outdata_meanSV.close();

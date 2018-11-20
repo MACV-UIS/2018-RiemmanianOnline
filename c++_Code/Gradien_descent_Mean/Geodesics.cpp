@@ -314,12 +314,12 @@ void compute_Log_A_resp_B_Variance(MatDoub &input_A, MatDoub &input_B, MatDoub &
         {
             Meigen_values_Y[j][j] = log(0.001);
             distAB = distAB + pow(Meigen_values_Y[j][j],2) ;
-            cout<< "error: valor para log <= 0 Log_A_resp_B_ " << endl;
-            cout<< " viene de la matrix: "<< endl;
+            //cout<< "error: valor para log <= 0 Log_A_resp_B_ " << endl;
+            //cout<< " viene de la matrix: "<< endl;
             displayMat(input_A);
-            cout << " con valores eigen values de: "<< endl;
+            //cout << " con valores eigen values de: "<< endl;
             displayMat(Meigen_values_Y);
-            cin.ignore();
+            //cin.ignore();
 
 
         }
@@ -378,12 +378,12 @@ void compute_Log_A_resp_B_Alpha(MatDoub &input_A, MatDoub &input_B, MatDoub &out
         {
             Meigen_values_Y[j][j] = log(0.001);
             distAB = distAB + pow(Meigen_values_Y[j][j],2) ;
-            cout<< "error: valor para log <= 0 Log_A_resp_B_ " << endl;
-            cout<< " viene de la matrix: "<< endl;
+            //cout<< "error: valor para log <= 0 Log_A_resp_B_ " << endl;
+            //cout<< " viene de la matrix: "<< endl;
             displayMat(input_A);
-            cout << " con valores eigen values de: "<< endl;
+            //cout << " con valores eigen values de: "<< endl;
             displayMat(Meigen_values_Y);
-            cin.ignore();
+            //cin.ignore();
 
 
         }
@@ -441,12 +441,12 @@ void compute_Log_A_resp_B_Fletcher(MatDoub &input_A, MatDoub &input_B, MatDoub &
         {
             Meigen_values_Y[j][j] = log(0.001);
             distAB = distAB + pow(Meigen_values_Y[j][j],2) ;
-            cout<< "error: valor para log <= 0 Log_A_resp_B_ " << endl;
-            cout<< " viene de la matrix: "<< endl;
+            //cout<< "error: valor para log <= 0 Log_A_resp_B_ " << endl;
+            //cout<< " viene de la matrix: "<< endl;
             displayMat(input_A);
-            cout << " con valores eigen values de: "<< endl;
+            //cout << " con valores eigen values de: "<< endl;
             displayMat(Meigen_values_Y);
-            cin.ignore();
+            //cin.ignore();
 
 
         }

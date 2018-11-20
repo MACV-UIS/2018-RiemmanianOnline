@@ -32,7 +32,29 @@ void Concat_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  string st
                     vector<string> vec_activities, int NFEATURES, int num_mean, float init_alpha)
 {
 
+    ///famarcar_15Nov
     // The experiments were carried out with LED
+    ofstream outdata_mean((name_file + "mean.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_mean.precision(10);
+    outdata_mean<<  fixed;
+
+    ofstream outdata_var((name_file + "var.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_var.precision(10);
+    outdata_var<<  fixed;
+
+    ofstream outdata_max((name_file + "max.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_max.precision(10);
+    outdata_max<<  fixed;
+
+    ofstream outdata_min((name_file + "min.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_min.precision(10);
+    outdata_min<<  fixed;
+
+
+
+
+
+
     ofstream outdata_mean_var((name_file + "mean_var.txt").c_str(), fstream::out); //1 means numero de divisiones del video
     outdata_mean_var.precision(10);
     outdata_mean_var<<  fixed;
@@ -53,6 +75,11 @@ void Concat_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  string st
     outdata_conc_all.precision(10);
     outdata_conc_all<<  fixed;
 
+    //ggarzon
+    ofstream outdata_conc_all_selected((name_file + "all_selected.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_conc_all_selected.precision(10);
+    outdata_conc_all_selected<<  fixed;
+
 
 
     float** submat = ToCreateMatrix2D(NFEATURES, NFEATURES);
@@ -64,7 +91,7 @@ void Concat_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  string st
 
 
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
-        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".scale";
+        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
 
 
 
@@ -186,6 +213,13 @@ void Concat_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  string st
             outdata_mean_der<< label_k<< " ";
             outdata_conc_all<< label_k<< " ";
 
+            outdata_mean<< label_k<< " ";
+            outdata_var<< label_k<< " ";
+            outdata_max<< label_k<< " ";
+            outdata_min<< label_k<< " ";
+
+            //ggarzon
+            outdata_conc_all_selected<< label_k<< " ";
 
 
 
@@ -237,6 +271,11 @@ void Concat_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  string st
 
             for(int i=0; i< NFEATURES; i++){
                 for(int j=i; j< NFEATURES; j++){
+                        outdata_mean<< cont_P << ":"<<array_mean[cont_tot_DifCov-1][i][j] << " ";
+                        outdata_var<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j] << " ";
+                        outdata_max<< cont_P << ":"<<array_min[cont_tot_DifCov-1][i][j] << " ";
+                        outdata_min<< cont_P << ":"<<array_max[cont_tot_DifCov-1][i][j] << " ";
+
                         outdata_mean_var<< cont_P << ":"<<array_mean[cont_tot_DifCov-1][i][j] << " ";
                         outdata_mean_min<< cont_P << ":"<<array_mean[cont_tot_DifCov-1][i][j] << " ";
                         outdata_mean_max<< cont_P << ":"<<array_mean[cont_tot_DifCov-1][i][j] << " ";
@@ -270,11 +309,65 @@ void Concat_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  string st
 
 
 
+
+
+
+
+            //ggarzon
+            int selected = 5;
+            cont_P = 1;
+            for(int i=0; i< NFEATURES; i++){
+                if(i>=selected){ continue; }
+                for(int j=i; j< NFEATURES; j++){
+                        if(j>=selected){ continue; }
+                        outdata_conc_all_selected<< cont_P << ":"<<array_mean[cont_tot_DifCov-1][i][j] << " ";
+                        cont_P++;
+                        }}
+
+
+            for(int i=0; i< NFEATURES; i++){
+                if(i>=selected){ continue; }
+                for(int j=i; j< NFEATURES; j++){
+                        if(j>=selected){ continue; }
+                        outdata_conc_all_selected<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j] << " ";
+                        cont_P++;
+                        }}
+
+             for(int i=0; i< NFEATURES; i++){
+                if(i>=selected){ continue; }
+                for(int j=i; j< NFEATURES; j++){
+                    if(j>=selected){ continue; }
+                    outdata_conc_all_selected<< cont_P++ << ":"<<array_min[cont_tot_DifCov-1][i][j] << " ";
+                    }}
+
+             for(int i=0; i< NFEATURES; i++){
+                if(i>=selected){ continue; }
+                for(int j=i; j< NFEATURES; j++){
+                    if(j>=selected){ continue; }
+                    outdata_conc_all_selected<< cont_P++ << ":"<<array_max[cont_tot_DifCov-1][i][j] << " ";
+                    }}
+
+             for(int i=0; i< NFEATURES; i++){
+                if(i>=selected){ continue; }
+                for(int j=i; j< NFEATURES; j++){
+                    if(j>=selected){ continue; }
+                    outdata_conc_all_selected<< cont_P++ << ":"<<array_dif[cont_tot_DifCov-1][i][j] << " ";
+                    }}
+
+            outdata_conc_all_selected<<endl;
+
+
+
             outdata_mean_var<<endl;
             outdata_mean_min<<endl;
             outdata_mean_max<<endl;
             outdata_mean_der<<endl;
             outdata_conc_all<<endl;
+
+            outdata_mean<<endl;
+            outdata_var<<endl;
+            outdata_max<<endl;
+            outdata_min<<endl;
 
 
 ///---------------------------------------------------
@@ -301,6 +394,12 @@ void Concat_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  string st
             outdata_mean_der.close();
             outdata_conc_all.close();
 
+            outdata_mean.close();
+            outdata_var.close();
+            outdata_max.close();
+            outdata_min.close();
+
+            outdata_conc_all_selected.close(); //ggarzon
 
 
 }
@@ -349,7 +448,7 @@ void Concat_Scal_Rec_Log_CoV(vector<string>  vec_videos, string name_file,  stri
 
 
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
-        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".scale";
+        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
 
 
 

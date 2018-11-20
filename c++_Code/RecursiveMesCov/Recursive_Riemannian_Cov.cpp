@@ -85,27 +85,27 @@ void Recursive_Riemannian_mean(vector<string>  vec_videos, string name_file,  st
     outdata_mean.precision(10);
     outdata_mean<<  fixed;
 
-//    ofstream outdata_var((name_file + "var.txt").c_str(), fstream::out); //1 means numero de divisiones del video
-//    outdata_var.precision(10);
-//    outdata_var<<  fixed;
-//
-//
-//    ofstream outdata_var2((name_file + "var2.txt").c_str(), fstream::out); //1 means numero de divisiones del video
-//    outdata_var2.precision(10);
-//    outdata_var2<<  fixed;
+    ofstream outdata_var((name_file + "var.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_var.precision(10);
+    outdata_var<<  fixed;
+
+
+    ofstream outdata_var2((name_file + "var2.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_var2.precision(10);
+    outdata_var2<<  fixed;
 
     // The experiments were carried out with LED
     ofstream outdata_meanSV((name_file +"meanSV.txt").c_str(), fstream::out); //1 means numero de divisiones del video
     outdata_meanSV.precision(10);
     outdata_meanSV<<  fixed;
 
-//    ofstream outdata_varSV((name_file + "varSV.txt").c_str(), fstream::out); //1 means numero de divisiones del video
-//    outdata_varSV.precision(10);
-//    outdata_varSV<<  fixed;
-//
-//    ofstream outdata_var2SV((name_file + "var2SV.txt").c_str(), fstream::out); //1 means numero de divisiones del video
-//    outdata_var2SV.precision(10);
-//    outdata_var2SV<<  fixed;
+    ofstream outdata_varSV((name_file + "varSV.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_varSV.precision(10);
+    outdata_varSV<<  fixed;
+
+    ofstream outdata_var2SV((name_file + "var2SV.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_var2SV.precision(10);
+    outdata_var2SV<<  fixed;
 
 
 
@@ -120,7 +120,7 @@ void Recursive_Riemannian_mean(vector<string>  vec_videos, string name_file,  st
 
 
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
-        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".scale";
+        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
 
 
 
@@ -237,13 +237,13 @@ void Recursive_Riemannian_mean(vector<string>  vec_videos, string name_file,  st
             int label_k = atoi(returnLabelAction_KTH(vec_videos[k], vec_activities ).c_str()); //-1 para que la primera sea cero
 
             outdata_mean<< label_k<< " ";
-//            outdata_var<< label_k<< " ";
-//            outdata_var2<< label_k<< " ";
+            outdata_var<< label_k<< " ";
+            outdata_var2<< label_k<< " ";
 
 
             outdata_meanSV<< label_k<< " ";
-//            outdata_varSV<< label_k<< " ";
-//            outdata_var2SV<< label_k<< " ";
+            outdata_varSV<< label_k<< " ";
+            outdata_var2SV<< label_k<< " ";
 
 
 //            //cout<< " hizo lo de  "<< endl;
@@ -262,12 +262,12 @@ void Recursive_Riemannian_mean(vector<string>  vec_videos, string name_file,  st
 
             float alpha_val = pow(2, -1*init_alpha);
             cout<< "alpha val: "<<alpha_val << endl;
-            //Copy_Cov(arr_cov[0], array_mean[0],  NFEATURES);
+            Copy_Cov(arr_cov[0], array_mean[0],  NFEATURES);
 
             float distAB=0;
             Copy_Cov(arr_cov[0], array_mean[0],  NFEATURES);
             Copy_Cov(arr_cov[0], array_var[0],  NFEATURES);
-//            float_Log_A_resp_I(arr_cov[0], array_mean[0],  NFEATURES, distAB);
+            float_Log_A_resp_I(arr_cov[0], array_mean[0],  NFEATURES, distAB);
 
 
 
@@ -275,7 +275,7 @@ void Recursive_Riemannian_mean(vector<string>  vec_videos, string name_file,  st
             {
 
                 compute_Rec_Riemmannian_Cov_Mean(array_mean[i_mean-1], arr_cov[i_mean], array_mean[i_mean],   alpha_val,  distAB,   NFEATURES);
-             //   compute_Rec_Riemmannian_Cov_Var(array_var[i_mean-1], array_mean[i_mean], arr_cov[i_mean], array_var[i_mean],   alpha_val,  distAB,  NFEATURES);
+                compute_Rec_Riemmannian_Cov_Var(array_var[i_mean-1], array_mean[i_mean], arr_cov[i_mean], array_var[i_mean],   alpha_val,  distAB,  NFEATURES);
 
                 arr_info_mean[i_mean][0] = i_mean;
             }
@@ -291,30 +291,35 @@ void Recursive_Riemannian_mean(vector<string>  vec_videos, string name_file,  st
                 for(int j=i; j< NFEATURES; j++){
                         outdata_mean<< cont_P << ":"<<mean_Log[i][j] << " ";
 
-//                        outdata_var<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j] << " ";
-//            outdata_var<<endl;
-//                        outdata_var2<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j]/cont_tot_DifCov << " ";
-//            outdata_var2<<endl;
+                        outdata_var<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j] << " ";
+            //outdata_var<<endl;
+                        outdata_var2<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j]/cont_tot_DifCov << " ";
+            //outdata_var2<<endl;
 
             cont_P++;
 
             }}
             outdata_mean<<endl;
+            outdata_var<<endl;
+            outdata_var2<<endl;
 
 
             cont_P =1;
             for(int i=0; i< NFEATURES; i++){
                 for(int j=i+1; j< NFEATURES; j++){
                         outdata_meanSV<< cont_P << ":"<<mean_Log[i][j] << " ";
-//                        outdata_varSV<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j] << " ";
-//            outdata_varSV<<endl;
-//                        outdata_var2SV<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j]/cont_tot_DifCov << " ";
-//            outdata_var2SV<<endl;
+                        outdata_varSV<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j] << " ";
+            //outdata_varSV<<endl;
+                        outdata_var2SV<< cont_P << ":"<<array_var[cont_tot_DifCov-1][i][j]/cont_tot_DifCov << " ";
+            //outdata_var2SV<<endl;
 
             cont_P++;
 
             }}
             outdata_meanSV<<endl;
+            outdata_varSV<<endl;
+            outdata_var2SV<<endl;
+
              ToEliminateMatrix2D(mean_Log, NFEATURES, NFEATURES);
 
 ///---------------------------------------------------
@@ -332,12 +337,12 @@ void Recursive_Riemannian_mean(vector<string>  vec_videos, string name_file,  st
 
 
             outdata_mean.close();
-//            outdata_var.close();
-//            outdata_var2.close();
+            outdata_var.close();
+            outdata_var2.close();
 
             outdata_meanSV.close();
-//            outdata_varSV.close();
-//            outdata_var2SV.close();
+            outdata_varSV.close();
+            outdata_var2SV.close();
 
 
 }
