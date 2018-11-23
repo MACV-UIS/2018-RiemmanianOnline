@@ -1829,7 +1829,7 @@
 	<opencv2/opencv.hpp>
 	<stdio.h>
 
-1542398754 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/TrajManage/MatricialTrajectoryManage.cpp
+1542806152 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/TrajManage/MatricialTrajectoryManage.cpp
 	<stdio.h>
 	<stdlib.h>
 	<iostream>
@@ -1843,7 +1843,7 @@
 	"../KinematicPrimitives/GoMKByFeat.h"
 	"../KinematicPrimitives/OnlyKinematics.h"
 
-1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/TrajManage/MatricialTrajectoryManage.h
+1542766778 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/TrajManage/MatricialTrajectoryManage.h
 
 1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/KinematicPrimitives/RecursiveMSByFeat.h
 	<stdio.h>
@@ -1859,7 +1859,7 @@
 	<vector>
 	<opencv2/opencv.hpp>
 
-1542398782 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/ConcatRecLogCov.cpp
+1542734107 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/ConcatRecLogCov.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1884,13 +1884,13 @@
 	<string>
 	<vector>
 
-1540581386 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/ConcatRecLogCov.h
+1542732221 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/ConcatRecLogCov.h
 	<stdio.h>
 	<stdlib.h>
 	<string>
 	<vector>
 
-1542325635 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/IntrinsecMeanVar.cpp
+1542863815 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/IntrinsecMeanVar.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1915,7 +1915,7 @@
 	<string>
 	<vector>
 
-1542333514 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/main.cpp
+1542892500 source:/home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/main.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1935,7 +1935,7 @@
 	"WithAppareancefeat.h"
 	"../Resources/GeneralFunctions.h"
 
-1540582342 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/Config.h
+1542892527 /home/macv/DATOS/fabio/2018-RiemmanianOnline/c++_Code/RecursiveMesCov/Config.h
 	<stdio.h>
 	<stdlib.h>
 	<string>

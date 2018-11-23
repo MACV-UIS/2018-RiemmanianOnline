@@ -169,26 +169,27 @@ void ToLoadMatTrajOnlyKin(int star_seq, int end_seq,string pathFileTrajectories,
                     sequenceTrajKin[m][cont_tj][2] = cont_z;
                     /// To add kinematics -------------------------------------
                     if(cont_z>2){
-                        sequenceTrajKin[m][cont_tj][8]  = comp_Theta(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0],
+
+                        sequenceTrajKin[m][cont_tj][3]  = comp_Theta(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0],
                                                                      sequenceTrajKin[m][cont_tj][1], sequenceTrajKin[m-1][cont_tj][1]); //Theta
-                        sequenceTrajKin[m][cont_tj][3]  = comp_Speed(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0],
+                        sequenceTrajKin[m][cont_tj][4]  = comp_Speed(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0],
                                                                      sequenceTrajKin[m][cont_tj][1], sequenceTrajKin[m-1][cont_tj][1]); //Speed
 //
-                        sequenceTrajKin[m][cont_tj][11]  = comp_Curv(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0], sequenceTrajKin[m-2][cont_tj][0],
+                        sequenceTrajKin[m][cont_tj][5]  = comp_Curv(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0], sequenceTrajKin[m-2][cont_tj][0],
                                                                     sequenceTrajKin[m][cont_tj][1], sequenceTrajKin[m-1][cont_tj][1], sequenceTrajKin[m-2][cont_tj][1],
                                                                     sequenceTrajKin[m][cont_tj][2], sequenceTrajKin[m-1][cont_tj][2], sequenceTrajKin[m-2][cont_tj][2]); //Curv
 
-                        sequenceTrajKin[m][cont_tj][7]  = comp_Tangy(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0],
+                        sequenceTrajKin[m][cont_tj][6]  = comp_Tangy(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0],
                                                                      sequenceTrajKin[m][cont_tj][1], sequenceTrajKin[m-1][cont_tj][1]);
-                        sequenceTrajKin[m][cont_tj][10]  = comp_Tangx(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0],
+                        sequenceTrajKin[m][cont_tj][7]  = comp_Tangx(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0],
                                                                      sequenceTrajKin[m][cont_tj][1], sequenceTrajKin[m-1][cont_tj][1]);
-                        sequenceTrajKin[m][cont_tj][5]  = comp_Normy(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0], sequenceTrajKin[m-2][cont_tj][0],
+                        sequenceTrajKin[m][cont_tj][8]  = comp_Normy(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0], sequenceTrajKin[m-2][cont_tj][0],
                                                                      sequenceTrajKin[m][cont_tj][1], sequenceTrajKin[m-1][cont_tj][1], sequenceTrajKin[m-2][cont_tj][1]);
                         sequenceTrajKin[m][cont_tj][9]  = comp_Normx(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0], sequenceTrajKin[m-2][cont_tj][0],
                                                                      sequenceTrajKin[m][cont_tj][1], sequenceTrajKin[m-1][cont_tj][1], sequenceTrajKin[m-2][cont_tj][1]);
-                        sequenceTrajKin[m][cont_tj][6] = comp_AcelT(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0], sequenceTrajKin[m-2][cont_tj][0],
+                        sequenceTrajKin[m][cont_tj][10] = comp_AcelT(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0], sequenceTrajKin[m-2][cont_tj][0],
                                                                      sequenceTrajKin[m][cont_tj][1], sequenceTrajKin[m-1][cont_tj][1], sequenceTrajKin[m-2][cont_tj][1]);
-                        sequenceTrajKin[m][cont_tj][4] = comp_AcelN(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0], sequenceTrajKin[m-2][cont_tj][0],
+                        sequenceTrajKin[m][cont_tj][11] = comp_AcelN(sequenceTrajKin[m][cont_tj][0], sequenceTrajKin[m-1][cont_tj][0], sequenceTrajKin[m-2][cont_tj][0],
                                                                      sequenceTrajKin[m][cont_tj][1], sequenceTrajKin[m-1][cont_tj][1], sequenceTrajKin[m-2][cont_tj][1]);
                     }
                     ///---------------------------------------------------------

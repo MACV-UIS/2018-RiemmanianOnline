@@ -33,13 +33,71 @@ int main()
 {
 
     ToLoadFiles();
-    cout<<" vec test: "<< vec_test.size() << " vec train: "<< vect_training_val.size() << " vec activities: "<< vec_activities.size() << endl;
+    cout<<" vec test: "<< vec_test.size() << " vec train: "<< vec_tes_train_val.size() << " vec activities: "<< vec_activities.size() << endl;
+    //cout<<" vec test: "<< vec_test.size() << " vec train: "<< vect_training_val.size() << " vec activities: "<< vec_activities.size() << endl;
+
+
+    ///*********************************************
+    ///              Intrinsec Mean
+    ///*********************************************
+
+    ///--------------------  UT --------------------------------
+
+    ///     Intrinsec_mean_VectoMapping(vec_test, "test_VectMap_Div_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
+    ///     Intrinsec_mean_VectoMapping(vect_training_val, "train_VectMap_Div_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
+
+    ///--------------------  UT --------------------------------
+         // segmentation 1
+         //Intrinsec_mean_VectoMapping(vec_tes_train_val, "UT_seg1_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
+         // segmentation 2
+         Intrinsec_mean_VectoMapping(vec_tes_train_val, "UT_seg2_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
+
+
+    //--------------------------------------------------------------------------------------------------
+
+    ///*********************************************
+    ///              Recursive euclidean space ONE SCALE
+    ///*********************************************
+
+      //Concat_Rec_Log_CoV(vec_tes_train_val, "UT_seg1_test_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
+      //Concat_Rec_Log_CoV(vect_training_val, "train_concMes_DF_26_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
+
+    ///*********************************************
+    ///              Recursive euclidean space MULTIPLE SCALES
+    ///*********************************************
+
+     // Concat_Scal_Rec_Log_CoV(vec_test, "test_concScal_Th_15_22_5_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0, 2);
+     // Concat_Scal_Rec_Log_CoV(vect_training_val, "train_concScal_Th15_22_5_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0, 2);
+
+
+    ///*********************************************
+    ///              Recursive RIEMMANIAN space ONE SCALE
+    ///*********************************************
+
 
 //    Recursive_Riemannian_mean(vec_test, "test_Riemannian_Th_30_23",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0);
 //    Recursive_Riemannian_mean(vect_training_val, "train_Riemannian_Th30_23",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0);
 
 //    Recursive_mean(vec_test, "test_IF_26",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
 //    Recursive_mean(vect_training_val, "train_IF_26",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
+
+
+    ///***************************************************
+    ///            FRAME LEVEL RECOGNITION
+    ///***************************************************
+
+       //Framelevel_Rec_Log_CoV(vec_tes_train_val, "UT_seg2_FrameL_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
+
+///**************************************************************************************************
+
+
+
+//    Recursive_Riemannian_mean(vec_test, "test_Riemannian_Th_30_23",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0);
+//    Recursive_Riemannian_mean(vect_training_val, "train_Riemannian_Th30_23",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0);
+
+//    Recursive_mean(vec_test, "test_IF_26",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
+//    Recursive_mean(vect_training_val, "train_IF_26",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
+
 
    // Intrinsec_Mean_Var(vec_test, "mv_test_Th_30_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
    // Intrinsec_Mean_Var(vect_training_val, "mv_train_Th_30_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
@@ -51,19 +109,15 @@ int main()
 //      Intrinsec_Mean_Var_tDiv_Iterative(vec_test, "test__tIter_Th_30",  str_path_trajectories, vec_activities,  NFEATURES, 10, 4, 20);
 
 
-//      Concat_Rec_Log_CoV(vec_test, "test_concMes_DF_26_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
-//      Concat_Rec_Log_CoV(vect_training_val, "train_concMes_DF_26_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
+     //Concat_Rec_Log_CoV(vec_test, "test_concMes_DF_26_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
+     //Concat_Rec_Log_CoV(vect_training_val, "train_concMes_DF_26_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 10.0);
+
+     // Concat_Scal_Rec_Log_CoV(vec_test, "test_concScal_Th_15_22_5_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0, 2);
+     // Concat_Scal_Rec_Log_CoV(vect_training_val, "train_concScal_Th15_22_5_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0, 2);
 
 
-      Concat_Scal_Rec_Log_CoV(vec_test, "test_concScal_Th_15_22_5_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0, 2);
-      Concat_Scal_Rec_Log_CoV(vect_training_val, "train_concScal_Th15_22_5_",  str_path_trajectories, vec_activities,  NFEATURES, 1, 3.0, 2);
-
-
-     //Intrinsec_mean_VectoMapping(vec_test, "test_VectMap_IF_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
-     //Intrinsec_mean_VectoMapping(vect_training_val, "train_VectMap_IF_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
-///     Intrinsec_mean_VectoMapping(vec_test, "test_VectMap_Div_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
-///     Intrinsec_mean_VectoMapping(vect_training_val, "train_VectMap_Div_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
-
+     //Intrinsec_mean_VectoMapping(vec_test, "test_IntriVectMap_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
+     //Intrinsec_mean_VectoMapping(vect_training_val, "train_IntriVectMap_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
 
 
 ///-------------------  not going to use appearance for now -------------------
@@ -75,9 +129,6 @@ int main()
 //                        vec_activities,  NFEATURES, 3, true);
 
 
-///--------------------  UT --------------------------------
-//     Intrinsec_mean_VectoMapping(vec_test, "test_XYt-TS-NxNy-k_DF_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
-//     Intrinsec_mean_VectoMapping(vect_training_val, "train_XYt-TS-NxNy-k_DF_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
 
      //XYTxTy
 //     Intrinsec_mean_Weka(vec_test, "weka_test_DF_",  str_path_trajectories, vec_activities,  NFEATURES, 3, 5.0);
@@ -89,15 +140,28 @@ int main()
 
 void ToLoadFiles()
 {
+
+///--------------------KTH -------------------------------
+//    redFileSequences(str_path_train, vec_tes_train_val);
+//    redFileSequences(str_path_test, vec_tes_train_val);
+//    redFileSequences(str_path_valid, vec_tes_train_val);
+//
+//    redFileSequences(str_path_test, vec_test);
+//
+//    redFileSequences(str_path_train, vect_training_val);
+//    redFileSequences(str_path_valid, vect_training_val);
+//
+//    redFileSequences(str_path_activities, vec_activities);
+    //redFileSequences(str_path_expAct, vec_examplesActions);
+
+///--------------------- UT -------------------------------
+
+    cout<< str_path_train<< endl;
     redFileSequences(str_path_train, vec_tes_train_val);
-    redFileSequences(str_path_test, vec_tes_train_val);
-    redFileSequences(str_path_valid, vec_tes_train_val);
 
-    redFileSequences(str_path_test, vec_test);
 
-    redFileSequences(str_path_train, vect_training_val);
-    redFileSequences(str_path_valid, vect_training_val);
 
     redFileSequences(str_path_activities, vec_activities);
     //redFileSequences(str_path_expAct, vec_examplesActions);
+
 }

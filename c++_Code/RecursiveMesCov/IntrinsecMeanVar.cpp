@@ -779,6 +779,11 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
     outdata_LogMeanW.precision(10);
     outdata_LogMeanW<<  fixed;
 
+    //ggarzon
+    ofstream outdata_LogMeanW_sel((name_file +"LogMeanW_sel.txt").c_str(), fstream::out); //1 means numero de divisiones del video
+    outdata_LogMeanW_sel.precision(10);
+    outdata_LogMeanW_sel<<  fixed;
+
     ofstream outdata_LogVar((name_file +"LogVar.txt").c_str(), fstream::out); //1 means numero de divisiones del video
     outdata_LogVar.precision(10);
     outdata_LogVar<<  fixed;
@@ -808,7 +813,8 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
     {
 
         cout<< k<< " )  processing video: "<< vec_videos[k]  << endl;
-        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
+        //string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".txt";
+        string path_textTrajectories_k = str_path_trajectories + vec_videos[k] + ".scale0";
         //cin.ignore();
 
 
@@ -822,6 +828,9 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
         cout<< "<----- creating mat: ["<< tot_seq_matrix_k<<"]["<< num_tot_traj_k<<"]["<< NFEATURES<<"]    ------>"<<endl;
         float*** sequenceKin_k = ToCreateMatrix3D(tot_seq_matrix_k, num_tot_traj_k, NFEATURES);
         ToInitMatrix3D(sequenceKin_k, tot_seq_matrix_k, num_tot_traj_k, NFEATURES);
+
+        float*** sequenceKin_k_only = ToCreateMatrix3D(tot_seq_matrix_k, num_tot_traj_k, NFEATURES);
+        ToInitMatrix3D(sequenceKin_k_only, tot_seq_matrix_k, num_tot_traj_k, NFEATURES);
 
         ToLoadMatTrajOnlyKin(0, numTotalFrames_k,path_textTrajectories_k,
                              heightFrame_k, widthFrame_k, num_tot_traj_k, 1, sequenceKin_k);
@@ -918,11 +927,12 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
         if(cont_tot_DifCov >num_mean)
         {
 
-           // cout<< " entro "<< endl;
-            int label_k = atoi(returnLabelAction_KTH(vec_videos[k], vec_activities ).c_str()); //-1 para que la primera sea cero
-           // int label_k = atoi(returnLabelAction_UT(vec_videos[k], vec_activities ).c_str()); //-1 para que la primera sea cero
-
+            cout<< " entro labels "<< endl;
+           // int label_k = atoi(returnLabelAction_KTH(vec_videos[k], vec_activities ).c_str()); //-1 para que la primera sea cero
+            int label_k = atoi(returnLabelAction_UT(vec_videos[k], vec_activities ).c_str()); //-1 para que la primera sea cero
+           // cout <<"etiqueta asignada: " <<label_k<< endl;
             outdata_LogMeanW<< label_k<< " ";
+            outdata_LogMeanW_sel<< label_k<< " "; //ggarzon
 //            outdata_meanW<< label_k<< " ";
             outdata_LogVar<< label_k<< " ";
             outdata_LogVarR<< label_k<< " ";
@@ -1091,6 +1101,21 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
             outdata_LogMeanVarR<<endl;
 
 
+
+            //ggarzon
+            int selected = 5;
+            cont_P = 1;
+            for(int i=0; i< NFEATURES; i++){
+                if(i>=selected){ continue; }
+                for(int j=i; j< NFEATURES; j++){
+                    if(j>=selected){ continue; }
+                    outdata_LogMeanW_sel<< cont_P << ":"<<Log_mean[i][j] << " ";
+                    cont_P++;
+                }
+            }
+            outdata_LogMeanW_sel<<endl;
+
+
             ToEliminateMatrix2D(_mean, NFEATURES, NFEATURES);
             ToEliminateMatrix2D(Log_mean, NFEATURES, NFEATURES);
             ToEliminateMatrix2D(VecMap_mean, NFEATURES, NFEATURES);
@@ -1108,6 +1133,7 @@ void Intrinsec_mean_VectoMapping(vector<string>  vec_videos, string name_file,  
     ToEliminateMatrix1D(EigenValSym, NFEATURES);
 
     outdata_LogMeanW.close();
+    outdata_LogMeanW_sel.close(); //ggarzon
     //outdata_meanW.close();
     outdata_LogVar.close();
     outdata_LogVarR.close();
